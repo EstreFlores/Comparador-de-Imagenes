@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d653aa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    color: #080808;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.comparador-container {
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    cursor: ew-resize; /* M esta Indicando el  deslizamiento */
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.comparador-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#item-1 {
+    background: url('../img/paw1.png') no-repeat center center;
+}
+
+#item-2 {
+    background: url('../img/paw2.png') no-repeat center center;
+    width: 50%;
+    background-attachment: fixed;
+}
+
+/* Este es el estilo para la línea divisora */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: ew-resize;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-handle::before {
+    content: '😄⇆';
+    color: black;
+    font-size: 24px;
+}
